@@ -5,6 +5,7 @@ import ProductList from "./components/ProductList";
 import AddProduct from "./components/AddProduct";
 import Navbar from "./components/Navbar";
 import ProductDetail from "./components/ProductDetail";
+import EditProduct from "./components/EditProduct";
 
 
 function App() {
@@ -27,6 +28,11 @@ function App() {
     path="/product/:id"
     element={<ProductDetail />}
   />
+
+  <Route
+  path="/edit/:id"
+  element={<EditProduct />}
+/>
   
 <Route
   path="/login"

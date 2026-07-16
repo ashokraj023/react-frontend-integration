@@ -83,6 +83,12 @@ function ProductList() {
 
             <p>₹{product.price}</p>
 
+            <Link to={`/edit/${product._id}`}>
+  <button className="edit-btn">
+    Edit
+  </button>
+</Link>
+
             <button
               className="delete-btn"
               onClick={() =>
