@@ -1,9 +1,11 @@
+import Login from "./components/Login";
 import { BrowserRouter, Routes, Route }
 from "react-router-dom";
 import ProductList from "./components/ProductList";
 import AddProduct from "./components/AddProduct";
 import Navbar from "./components/Navbar";
 import ProductDetail from "./components/ProductDetail";
+
 
 function App() {
   return (
@@ -25,7 +27,11 @@ function App() {
     path="/product/:id"
     element={<ProductDetail />}
   />
-
+  
+<Route
+  path="/login"
+  element={<Login />}
+/>
       </Routes>
 
     </BrowserRouter>
