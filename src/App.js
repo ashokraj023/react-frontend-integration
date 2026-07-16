@@ -6,6 +6,7 @@ import AddProduct from "./components/AddProduct";
 import Navbar from "./components/Navbar";
 import ProductDetail from "./components/ProductDetail";
 import EditProduct from "./components/EditProduct";
+import Register from "./components/Register";
 
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
 <Route
   path="/login"
   element={<Login />}
+/>
+<Route
+  path="/register"
+  element={<Register />}
 />
       </Routes>
 

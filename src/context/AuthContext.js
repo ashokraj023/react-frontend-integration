@@ -47,6 +47,20 @@ export function AuthProvider({ children }) {
 
   };
 
+  const register = async (email, password) => {
+
+  const res = await axios.post(
+    "http://localhost:3000/auth/register",
+    {
+      email,
+      password
+    }
+  );
+
+  return res.data;
+
+};
+
   const logout = () => {
 
     localStorage.removeItem("token");
@@ -60,13 +74,14 @@ export function AuthProvider({ children }) {
   return (
 
     <AuthContext.Provider
-      value={{
-        user,
-        token,
-        login,
-        logout
-      }}
-    >
+  value={{
+    user,
+    token,
+    login,
+    register,
+    logout
+  }}
+>
 
       {children}
 
