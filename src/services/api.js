@@ -27,7 +27,11 @@ export const fetchProducts = () =>
   API.get("/products");
 
 export const createProduct = (product) =>
-  API.post("/products", product);
+  API.post("/products", product, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
 
 export const deleteProduct = (id) =>
   API.delete(`/products/${id}`);
